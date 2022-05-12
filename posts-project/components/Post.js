@@ -1,6 +1,7 @@
 import { Creator } from "./Creator.js";
+import {fetchData, showComments} from "../helpers.js";
 
-export const Post = ({ title, body, creator: user }, inputValue) => {
+export const Post = ({ title, id : postId, body, creator: user }, inputValue) => {
   const clone = document
     .querySelector("#post-template")
     .content.cloneNode(true);
@@ -14,6 +15,13 @@ export const Post = ({ title, body, creator: user }, inputValue) => {
   clone
     .querySelector(".post")
     .prepend(Creator(user))
-    .setAttribute("userId", `${user.id}`);
+
+  const comments = clone.querySelector('.comment-links');
+  clone.querySelector('.comments-container').setAttribute('data-post-id', postId);
+
+  comments.setAttribute('data-post-id', postId);
+
+  comments.addEventListener('click', showComments);
+
   return clone;
 };

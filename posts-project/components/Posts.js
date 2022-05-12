@@ -7,7 +7,7 @@ export const Posts = (data, inputValue) => {
 
   if (data.length) {
     const df = new DocumentFragment();
-
+  // console.log(data)
     data.forEach((post) => {
       df.appendChild(Post(post, inputValue));
     });
