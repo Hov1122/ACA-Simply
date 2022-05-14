@@ -16,9 +16,9 @@
             </div>
 
             <div class="license-container__logo">
-                <img class="license-container__logo" height="30" width="30" src="./images/free.png" alt="free">
-                <img class="license-container__logo" height="30" width="30" src="./images/pro.png" alt="pro">
-                <img  class="license-container__logo" height="30" width="30" src="./images/vip.png" alt="vip">
+                <div class="logo-btn"><div class="center">FREE</div></div>
+                <div class="logo-btn btn-color-gray opacity"><div class="center">PRO</div></div>
+                <div class="logo-btn btn-color-yellow opacity"><div class="center">VIP</div></div>
             </div>
             <button type="button" class="license-container__btn--upgrade">Upgrade Now</button>
         </div>
@@ -28,16 +28,86 @@
             <a href="#sub" class="menu-container__item">Outright</a>
             <a href="#sub" class="menu-container__item">Offline Activation</a>
         </div>
-<!--        <hr>-->
     </header>
 
     <section class="systems">
-        <h3>Systems</h3>
+        <h3 class="text">Systems</h3>
+            <div class="systems-container">
+                <div>System Name</div>
+                <div>Id</div>
+                <div>Created Date</div>
+                <div>Active License</div>
+                <div class="spacer-h"></div>
+
+                <div><div class="arrow-down"></div> James main macbook</div>
+                <div>91520</div>
+                <div>01 Jan 2019</div>
+                <div>2</div>
+                <div class="spacer-r"></div>
+                <div class="row1-add-licenses">
+                    <button class="add-license-btn">Add License</button>
+                    <button class="remove-license-btn">Remove License</button>
+                </div>
+
+                <div class="sr-h1">Licenses</div>
+                <div class="sr-h2">Expires</div>
+                <div class="srh-spacer"></div>
+
+                <div class="rectangle-down">
+                    <div style="height: 50px"></div>
+                    <div class="rectangle-right"></div>
+                    <div style="height: 50px"></div>
+                    <div class="rectangle-right"></div>
+                </div>
+
+                <div clsass="sr-h1">Jenkins Pro</div>
+                <div class="sr-h2">Never</div>
+                <div class="sr-rspacer1"></div>
+
+                <div style="text-align: end">
+                    <button class="dl-btn" type="button">Download</button>
+                </div>
+
+                <div class="sr-h1">Outfit Pro</div>
+                <div class="sr-h2">29 Jul 2021</div>
+                <div class="sr-rspacer1"></div>
+                <div style="text-align: end">
+                    <button class="dl-btn" type="button">Download</button>
+                </div>
+                <div class="srh-spacer"></div>
+
+                <div class="r2h">Created Date</div>
+                <div>Active license</div>
+                <div class="r2hspacer"></div>
+
+                <div><div class="arrow-right"></div> James laptop</div>
+                <div>84629</div>
+                <div>15 Jan 2020</div>
+                <div>1</div>
+                <div class="spacer-r"></div>
+                <div>
+                    <button class="add-license-btn">Add License</button>
+                    <button class="remove-license-btn">Remove License</button>
+                </div>
+
+            </div>
+
+            </div>
     </section>
 
     <section class="drag-file">
-        <p>&#8595</p>
-        <input type="file" name="" id="">
+        <h4 class="text">Add System</h4>
+        <div class="rectangle">
+            <div class="square">
+                <p style="color: floralwhite">&#8595</p>
+            </div>
+            <div class="info">
+                <p style="color: white">
+                    <input type="file" id="files" class="hidden"/>
+                    <label for="files" style="color: #0f5681">Select file</label>
+                    to upload or drag it here (jpg, png, max size 5mb)</p>
+            </div>
+        </div>
     </section>
 
 </body>
