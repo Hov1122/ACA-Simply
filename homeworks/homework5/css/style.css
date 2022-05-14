@@ -272,6 +272,7 @@ body {
 }
 
 .add-license-btn {
+    height: 30px;
     margin-right: 10px;
     background: #499861;
     border-radius: 4px;
@@ -288,5 +289,6 @@ body {
 .remove-license-btn {
     background: #CC4343;
     border-radius: 4px;
+    height: 30px;
 }
 
