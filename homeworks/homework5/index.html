@@ -11,88 +11,103 @@
 <body>
     <header>
         <div class="license-container">
-            <div class="license-container__name">
-                <h2 class="license-container__name" >Licenses</h2>
+            <div class="license-container__name page_title">
+                <h2 class="license-container__name">Licenses</h2>
             </div>
 
-            <div class="license-container__logo">
-                <div class="logo-btn"><div class="center">FREE</div></div>
-                <div class="logo-btn btn-color-gray opacity"><div class="center">PRO</div></div>
-                <div class="logo-btn btn-color-yellow opacity"><div class="center">VIP</div></div>
+            <div class="license-container__logo plans">
+                <a href=""><div class="logo-btn free"></div></a>
+                <a href=""><div class="logo-btn btn-color-gray pro"></div></a>
+                <a href=""><div class="logo-btn btn-color-yellow vip"></div></a>
             </div>
             <button type="button" class="license-container__btn--upgrade">Upgrade Now</button>
         </div>
 
-        <div class="menu-container">
-            <a href="#sub" class="menu-container__item">Subscription</a>
-            <a href="#sub" class="menu-container__item">Outright</a>
-            <a href="#sub" class="menu-container__item">Offline Activation</a>
+        <div class="menu-container tabs">
+            <a href="#sub1" class="menu-container__item tab1"></a>
+            <a href="#sub2" class="menu-container__item tab2"></a>
+            <a href="#sub3" class="menu-container__item tab3 focus"></a>
         </div>
     </header>
 
     <section class="systems">
-        <h3 class="text">Systems</h3>
-            <div class="systems-container">
-                <div>System Name</div>
-                <div>Id</div>
-                <div>Created Date</div>
-                <div>Active License</div>
-                <div class="spacer-h"></div>
 
-                <div><div class="arrow-down"></div> James main macbook</div>
-                <div>91520</div>
-                <div>01 Jan 2019</div>
-                <div>2</div>
-                <div class="spacer-r"></div>
-                <div class="row1-add-licenses">
+        <table class="systems-table">
+            <thead>
+            <tr>
+                <th style="text-align: start;">System name</th>
+                <th style="text-align: start;">Id</th>
+                <th style="text-align: start;">Created Date</th>
+                <th style="text-align: start;">Active License</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody class="row slidable r-systems">
+            <tr>
+                <td></td>
+                <td style="text-align: end">
                     <button class="add-license-btn">Add License</button>
-                    <button class="remove-license-btn">Remove License</button>
-                </div>
+                    <button class="remove-license-btn">Remove license</button>
+                </td>
+            </tr>
 
-                <div class="sr-h1">Licenses</div>
-                <div class="sr-h2">Expires</div>
-                <div class="srh-spacer"></div>
+            </tbody>
 
-                <div class="rectangle-down">
-                    <div style="height: 50px"></div>
-                    <div class="rectangle-right"></div>
-                    <div style="height: 50px"></div>
-                    <div class="rectangle-right"></div>
-                </div>
+            <template class="subs">
+<!--                <tr>-->
+<!--                    <tbody class="hide">-->
+                    <tr style="display: none; background-color: #1f2224" >
+<!--                        <td style="text-align: start; width: 250px" rowspan="3">-->
+<!--                            <div style="height: 70px; width: 10px; display: inline-block; padding: 50px 0; background: #1A1C1E">-->
+<!--                                <div style="width: 200px; height: 10px; margin-top: 50px; background: #1A1C1E"></div>-->
+<!--                                <div style="width: 200px; height: 10px; margin-top: 50px; background: #1A1C1E"></div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+                        <td></td>
+                        <td colspan="1" style="text-align: start">Licenses</td>
+                        <td colspan="2" style="text-align: start">Expire</td>
 
-                <div clsass="sr-h1">Jenkins Pro</div>
-                <div class="sr-h2">Never</div>
-                <div class="sr-rspacer1"></div>
+                    </tr>
 
-                <div style="text-align: end">
-                    <button class="dl-btn" type="button">Download</button>
-                </div>
+<!--                    </tbody>-->
+            </template>
 
-                <div class="sr-h1">Outfit Pro</div>
-                <div class="sr-h2">29 Jul 2021</div>
-                <div class="sr-rspacer1"></div>
-                <div style="text-align: end">
-                    <button class="dl-btn" type="button">Download</button>
-                </div>
-                <div class="srh-spacer"></div>
+            <template class="subrow">
+                <tr class="row">
+                    <td style="text-align: start; background-color: #1f2224">
+                        <div style="height: 30px;  width: 10px; display: inline-block; padding: 0; margin: 0; background: #1A1C1E">
 
-                <div class="r2h">Created Date</div>
-                <div>Active license</div>
-                <div class="r2hspacer"></div>
+                        </div>
+                        <div style="width: 100%; margin-top: -5px; padding: 0; height: 10px; background: #1A1C1E"></div>
+                    </td>
+                    <td style="text-align: start"></td>
+                    <td colspan="2" style="text-align: start"></td>
+                    <td colspan="3" style="text-align: end"><button class="dl-btn" type="button">Download</button></td>
+                </tr>
+            </template>
 
-                <div><div class="arrow-right"></div> James laptop</div>
-                <div>84629</div>
-                <div>15 Jan 2020</div>
-                <div>1</div>
-                <div class="spacer-r"></div>
-                <div>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: start">Created Date</td>
+                <td colspan="2" style="text-align: start">Active License</td>
+            </tr>
+
+            <tbody class="row r-systems slidable">
+                 <tr>
+                     <td></td>
+                    <td style="text-align: end">
                     <button class="add-license-btn">Add License</button>
-                    <button class="remove-license-btn">Remove License</button>
-                </div>
+                    <button class="remove-license-btn">Remove license</button>
+                    </td>
+                 </tr>
 
-            </div>
+            </tbody>
+        </table>
 
-            </div>
     </section>
 
     <section class="drag-file">
@@ -104,11 +119,12 @@
             <div class="info">
                 <p style="color: white">
                     <input type="file" id="files" class="hidden"/>
-                    <label for="files" style="color: #0f5681">Select file</label>
+                    <label for="files" style="color: #0f5681">Choose a file</label>
                     to upload or drag it here (jpg, png, max size 5mb)</p>
             </div>
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>

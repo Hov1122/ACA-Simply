@@ -8,10 +8,19 @@
     <title>Document</title>
   </head>
   <body>
+
+    <button class="pop-up">Add post</button>
+    <div class="add-post-pop--up">
+      <input data-val="title" type="text" placeholder="title">
+      <input data-val="body" type="text" placeholder="body">
+      <button class="post-btn" type="submit" disabled style="width: 100px">Add post</button>
+    </div>
+
     <div id="root"></div>
 
     <template id="search-template">
       <div class="search-container">
+
         <input class="search" />
       </div>
     </template>

@@ -1,10 +1,13 @@
 import { BASE_URL } from "./constants.js";
 
-export const fetchData = async (url) => {
-  const newUrl = url.startsWith("/") ? url.slice(1) : url;
+export const fetchData = async (url, params = {}) => {
 
+  const newUrl = url.startsWith("/") ? url.slice(1) : url;
+console.log(params)
+    console.log(`${BASE_URL}${newUrl}`)
   try {
-    const response = await fetch(`${BASE_URL}${newUrl}`);
+    const response = await fetch(`${BASE_URL}${newUrl}`, params);
+    console.log(response)
     return response.json();
   } catch (e) {
     console.log(e.message);
