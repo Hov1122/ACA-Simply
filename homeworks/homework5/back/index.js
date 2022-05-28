@@ -43,7 +43,7 @@ io.on('connection', (socket) => {
         const data = await getData();
         data.forEach(todo => {
             if (!todo.isReminded && new Date(todo.reminder) - new Date() < 120000) {
-                todo.isReminded = 'true';
+                todo.isReminded = true;
                 console.log(todo.title);
                 socket.emit('reminder', todo.title); //message sent from server to client
                 addData(data);

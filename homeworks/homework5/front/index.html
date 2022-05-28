@@ -33,6 +33,8 @@
         console.log(data);
         const msg = document.querySelector('.message')
         msg.style.display = 'flex';
+        msg.classList.add('to-right-ani');
+        msg.innerHTML = "";
         const span = document.createElement('span');
         span.style.fontSize = '25px'
 

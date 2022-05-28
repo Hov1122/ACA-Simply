@@ -58,7 +58,6 @@ function newElement({title, reminder, id, completed} = {}) {
         inputValue = document.getElementById("myInput").value;
         reminderVal = document.querySelector(".date").value;
     }
-    console.log(new Date(reminderVal).toISOString(), new Date())
     const t = document.createElement("INPUT");
     t.value = inputValue;
     t.addEventListener('change', updateData);
@@ -66,6 +65,7 @@ function newElement({title, reminder, id, completed} = {}) {
     li.appendChild(t);
     if (inputValue === '' || reminderVal === '') {
         // alert();
+        return;
     } else {
         document.getElementById("myUL").appendChild(li);
     }
@@ -99,7 +99,7 @@ function newElement({title, reminder, id, completed} = {}) {
         fetch("http://localhost:5000/todo", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({title: inputValue, reminder: reminderVal})
+            body: JSON.stringify({title: inputValue, reminder: new Date(reminderVal).toISOString()})
         })
     }
 }
