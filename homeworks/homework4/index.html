@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="license-container">
+            <div class="license-container__name page_title">
+                <h2 class="license-container__name">Licenses</h2>
+            </div>
+
+            <div class="license-container__logo plans">
+                <a href=""><div class="logo-btn free"></div></a>
+                <a href=""><div class="logo-btn btn-color-gray pro"></div></a>
+                <a href=""><div class="logo-btn btn-color-yellow vip"></div></a>
+            </div>
+            <button type="button" class="license-container__btn--upgrade">Upgrade Now</button>
+        </div>
+
+        <div class="menu-container tabs">
+            <a href="#sub1" class="menu-container__item tab1"></a>
+            <a href="#sub2" class="menu-container__item tab2"></a>
+            <a href="#sub3" class="menu-container__item tab3 focus"></a>
+        </div>
+    </header>
+
+    <section class="systems">
+
+        <table class="systems-table">
+            <thead>
+            <tr>
+                <th style="text-align: start;">System name</th>
+                <th style="text-align: start;">Id</th>
+                <th style="text-align: start;">Created Date</th>
+                <th style="text-align: start;">Active License</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody class="row slidable r-systems">
+            <tr>
+                <td></td>
+                <td style="text-align: end">
+                    <button class="add-license-btn">Add License</button>
+                    <button class="remove-license-btn">Remove license</button>
+                </td>
+            </tr>
+
+            </tbody>
+            <tbody class="row slidable r-systems">
+            <tr>
+                <td></td>
+                <td style="text-align: end">
+                    <button class="add-license-btn">Add License</button>
+                    <button class="remove-license-btn">Remove license</button>
+                </td>
+            </tr>
+
+            </tbody>
+            <template class="subs">
+<!--                <tr>-->
+<!--                    <tbody class="hide">-->
+                    <tr style="display: none; background-color: #1f2224" >
+<!--                        <td style="text-align: start; width: 250px" rowspan="3">-->
+<!--                            <div style="height: 70px; width: 10px; display: inline-block; padding: 50px 0; background: #1A1C1E">-->
+<!--                                <div style="width: 200px; height: 10px; margin-top: 50px; background: #1A1C1E"></div>-->
+<!--                                <div style="width: 200px; height: 10px; margin-top: 50px; background: #1A1C1E"></div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+                        <td></td>
+                        <td colspan="1" style="text-align: start">Licenses</td>
+                        <td colspan="2" style="text-align: start">Expire</td>
+
+                    </tr>
+
+<!--                    </tbody>-->
+            </template>
+
+            <template class="subrow">
+                <tr class="row">
+                    <td style="text-align: start; background-color: #1f2224">
+                        <div style="height: 30px;  width: 10px; display: inline-block; padding: 0; margin: 0; background: #1A1C1E">
+
+                        </div>
+                        <div style="width: 100%; margin-top: -5px; padding: 0; height: 10px; background: #1A1C1E"></div>
+                    </td>
+                    <td style="text-align: start"></td>
+                    <td colspan="2" style="text-align: start"></td>
+                    <td colspan="3" style="text-align: end"><button class="dl-btn" type="button">Download</button></td>
+                </tr>
+            </template>
+
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: start">Created Date</td>
+                <td colspan="2" style="text-align: start">Active License</td>
+            </tr>
+
+            <tbody class="row r-systems slidable">
+                 <tr>
+                     <td></td>
+                    <td style="text-align: end">
+                    <button class="add-license-btn">Add License</button>
+                    <button class="remove-license-btn">Remove license</button>
+                    </td>
+                 </tr>
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <section class="drag-file">
+        <h4 class="text">Add System</h4>
+        <div class="rectangle">
+            <div class="square">
+                <p style="color: floralwhite">&#8595</p>
+            </div>
+            <div class="info">
+                <p style="color: white">
+                    <input type="file" id="files" class="hidden"/>
+                    <label for="files" style="color: #0f5681">Choose a file</label>
+                    to upload or drag it here (jpg, png, max size 5mb)</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="myDIV" class="header">
+    <h2 style="margin:5px">To Do List</h2>
+    <input type="text" id="myInput" class="title" placeholder="Title...">
+    <input class="date" type="datetime-local" placeholder="date">
+    <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+
+<ul id="myUL">
+
+</ul>
+
+<div class="message">
+
+</div>
+
+<script src="script.js"></script>
+
+<script type="module">
+    import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+
+    //Client receives the message:
+    const socket = io('http://localhost:5000/', { transports : ['websocket'] });
+    socket.on('reminder', (data) => { //received message
+        console.log(data);
+        const msg = document.querySelector('.message')
+        msg.style.display = 'flex';
+        const span = document.createElement('span');
+        span.style.fontSize = '25px'
+
+        span.innerText = data;
+        msg.append(span);
+        setTimeout(() => {
+            msg.style.display = 'none';
+        }, 10000)
+    });
+</script>
+
+</body>
+</html>
+
